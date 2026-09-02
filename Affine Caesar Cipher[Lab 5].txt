@@ -1,0 +1,15 @@
+text = input("Enter text: ").upper()
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+
+cipher = ""
+
+for ch in text:
+    if ch.isalpha():
+        p = ord(ch) - ord('A')
+        c = (a * p + b) % 26
+        cipher += chr(c + ord('A'))
+    else:
+        cipher += ch
+
+print("Encrypted text:", cipher)
