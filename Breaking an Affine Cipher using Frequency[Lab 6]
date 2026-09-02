@@ -1,0 +1,13 @@
+from collections import Counter
+
+cipher = input("Enter ciphertext: ").upper()
+
+freq = Counter(cipher)
+
+print("Letter Frequencies:")
+for letter, count in freq.most_common():
+    if letter.isalpha():
+        print(letter, ":", count)
+
+print("\nMost frequent letter:", freq.most_common(1)[0][0])
+print("Second most frequent letter:", freq.most_common(2)[1][0])
