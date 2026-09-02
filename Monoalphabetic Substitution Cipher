@@ -1,0 +1,14 @@
+plain = "abcdefghijklmnopqrstuvwxyz"
+cipher = "qwertyuiopasdfghjklzxcvbnm"
+
+text = input("Enter text: ").lower()
+encrypted = ""
+
+for ch in text:
+    if ch in plain:
+        index = plain.index(ch)
+        encrypted += cipher[index]
+    else:
+        encrypted += ch
+
+print("Encrypted text:", encrypted)
